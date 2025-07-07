@@ -66,3 +66,4 @@ plot_ly(
 ```
 
 We created an interactive scatterplot using Plotly to explore the relationship between daily returns of Bitcoin and Ethereum. Each point represents a single day, with color intensity mapped to time. The plot allows for zooming and hovering to inspect exact return values and dates, providing a dynamic view of the correlation between the two cryptocurrencies.
+
