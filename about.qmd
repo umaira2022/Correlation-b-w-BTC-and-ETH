@@ -1,5 +1,10 @@
 ---
 title: "About"
+author: "Umaira"
 ---
 
-About this site
+Author is a Lecturer in Computer Science with a Master's degree in Computer Science from Pakistan. I am new to Data Science but highly motivated to pursue it for my PhD studies. You can reach me via [GitHub](https://github.com/umaira2022) or by email at [umaira.nazar09@gmail.com](mailto:umaira.nazar09@gmail.com).
+
+This project explores the relationship between Bitcoin and Ethereum by analyzing their daily returns and volatility. The full project is available on [GitHub](https://github.com/umaira2022/Correlation-b-w-BTC-and-ETH).
+
+This project was created as a part of [Kane’s Data Science Bootcamp](https://bootcamp.davidkane.info/).

@@ -7,8 +7,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-
+      - href: about.qmd
+        text: About
+      - href: sources.qmd
+        text: Sources
+      - href: volatility.qmd
+        text: Volatility
 format:
   html:
     theme:

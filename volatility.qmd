@@ -1,0 +1,48 @@
+---
+title: "Volatility"
+format: html
+execute: 
+  echo: false
+  warning: false
+  message: false
+---
+
+## 📉 30-Day Rolling Volatility of BTC and ETH
+
+This plot shows the rolling 30-day standard deviation of daily returns for both Bitcoin and Ethereum. Higher values indicate more price fluctuation and market uncertainty.
+
+```{r}
+# Load necessary packages
+library(tidyverse)
+library(zoo)
+library(readr)
+library(plotly)
+
+# Load BTC & ETH data
+btc <- read_rds("btc.rds")
+eth <- read_rds("eth.rds")
+
+# Merge & calculate returns
+crypto <- inner_join(btc, eth, by = "date", suffix = c("_btc", "_eth")) |>
+  arrange(date) |>
+  mutate(
+    return_btc = (price_btc / lag(price_btc)) - 1,
+    return_eth = (price_eth / lag(price_eth)) - 1
+  ) |>
+  mutate(
+    btc_vol = rollapply(return_btc, 30, sd, fill = NA, align = "right"),
+    eth_vol = rollapply(return_eth, 30, sd, fill = NA, align = "right")
+  )
+
+# Create interactive volatility plot with Plotly
+plot_ly(crypto, x = ~date) |>
+  add_lines(y = ~btc_vol, name = "BTC Volatility", line = list(color = 'orange')) |>
+  add_lines(y = ~eth_vol, name = "ETH Volatility", line = list(color = 'blue')) |>
+  layout(
+    title = "30-Day Rolling Volatility (Interactive)",
+    xaxis = list(title = "Date", rangeslider = list(visible = TRUE)),
+    yaxis = list(title = "Standard Deviation"),
+    hovermode = "x unified"
+  )
+
+```

@@ -1,0 +1,13 @@
+---
+title: "Sources"
+format: html
+---
+
+The dataset for this project was obtained using the free [CoinGecko API](https://www.coingecko.com/en/api), which provides real-time and historical cryptocurrency market data. Specifically, we used endpoints that return daily price data for Bitcoin and Ethereum in USD over the past 365 days.
+
+To retrieve the data, we built a custom R function using the `httr` and `jsonlite` packages. The API response was parsed and converted into a clean tibble using `dplyr`, with timestamps transformed into proper `Date` format. The prices were extracted and renamed for clarity, and only the relevant fields were retained.
+
+The data was saved locally in `.rds` format for efficient access during analysis. No observations were removed from the dataset. Only the most recent 365 days were used due to CoinGecko’s rate limits on historical data for free-tier users.
+
+This process ensured a reproducible and efficient workflow for collecting, storing, and analyzing cryptocurrency data in R.
+

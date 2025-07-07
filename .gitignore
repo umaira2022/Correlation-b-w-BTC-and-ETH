@@ -1,2 +1,5 @@
 /.quarto/
 _site
+btc.rds
+eth.rds
+*_files
