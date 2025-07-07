@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "volatility.html",
+    "href": "volatility.html",
+    "title": "Volatility",
+    "section": "",
+    "text": "This plot shows the rolling 30-day standard deviation of daily returns for both Bitcoin and Ethereum. Higher values indicate more price fluctuation and market uncertainty."
+  },
+  {
+    "objectID": "volatility.html#day-rolling-volatility-of-btc-and-eth",
+    "href": "volatility.html#day-rolling-volatility-of-btc-and-eth",
+    "title": "Volatility",
+    "section": "",
+    "text": "This plot shows the rolling 30-day standard deviation of daily returns for both Bitcoin and Ethereum. Higher values indicate more price fluctuation and market uncertainty."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Crypto Correlation",
+    "section": "",
+    "text": "Bitcoin and Ethereum exhibit a strong positive correlation over the past year, with a correlation coefficient of 0.8. This suggests that their price movements are closely linked, likely due to broader cryptocurrency market sentiment. Despite this correlation, each asset has its own risk profile, as shown in their volatility patterns. This analysis highlights how tightly coupled major cryptocurrencies are and why diversification within the crypto space may not significantly reduce risk.\n\n\n\n\n\n\nWe created an interactive scatterplot using Plotly to explore the relationship between daily returns of Bitcoin and Ethereum. Each point represents a single day, with color intensity mapped to time. The plot allows for zooming and hovering to inspect exact return values and dates, providing a dynamic view of the correlation between the two cryptocurrencies."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Author is a Lecturer in Computer Science with a Master’s degree in Computer Science from Pakistan. I am new to Data Science but highly motivated to pursue it for my PhD studies. You can reach me via GitHub or by email at umaira.nazar09@gmail.com.\nThis project explores the relationship between Bitcoin and Ethereum by analyzing their daily returns and volatility. The full project is available on GitHub.\nThis project was created as a part of Kane’s Data Science Bootcamp."
+  },
+  {
+    "objectID": "sources.html",
+    "href": "sources.html",
+    "title": "Sources",
+    "section": "",
+    "text": "The dataset for this project was obtained using the free CoinGecko API, which provides real-time and historical cryptocurrency market data. Specifically, we used endpoints that return daily price data for Bitcoin and Ethereum in USD over the past 365 days.\nTo retrieve the data, we built a custom R function using the httr and jsonlite packages. The API response was parsed and converted into a clean tibble using dplyr, with timestamps transformed into proper Date format. The prices were extracted and renamed for clarity, and only the relevant fields were retained.\nThe data was saved locally in .rds format for efficient access during analysis. No observations were removed from the dataset. Only the most recent 365 days were used due to CoinGecko’s rate limits on historical data for free-tier users.\nThis process ensured a reproducible and efficient workflow for collecting, storing, and analyzing cryptocurrency data in R."
+  }
+]
