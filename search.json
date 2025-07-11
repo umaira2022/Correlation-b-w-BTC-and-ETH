@@ -16,7 +16,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Crypto Correlation",
+    "title": "Correlation Between BTC and ETH Returns",
     "section": "",
     "text": "The prices of Bitcoin and Ethereum have exhibited a strong positive correlation over the past year, with a correlation coefficient of 0.8. The dataset for this analysis was obtained from the CoinGecko API, covering daily price movements for Bitcoin and Ethereum in USD over the past 365 days. Data was retrieved using custom R functions with the httr and jsonlite packages, then cleaned and processed using dplyr to create a structured dataset with properly formatted dates and price variables measured in US dollars. The strong correlation between Bitcoin and Ethereum suggests that diversification within the cryptocurrency space may not significantly reduce risk, as major cryptocurrencies tend to move in tandem due to broader market sentiment.\n\n\n\n\n\n\nWe created an interactive scatterplot using Plotly to explore the relationship between daily returns of Bitcoin and Ethereum. Each point represents a single day, with color intensity mapped to time. The plot allows for zooming and hovering to inspect exact return values and dates, providing a dynamic view of the correlation between the two cryptocurrencies."
   },
